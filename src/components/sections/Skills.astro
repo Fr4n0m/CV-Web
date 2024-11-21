@@ -1,1 +1,93 @@
-<h1>Skills</h1>
+---
+import { skills } from "@cv";
+
+import Aws from "@/icons/Aws.astro";
+import CSS from "@/icons/Css.astro";
+import Deno from "@/icons/Deno.astro";
+import Docker from "@/icons/Docker.astro";
+import Flutter from "@/icons/Flutter.astro";
+import Git from "@/icons/Git.astro";
+import GitHub from "@/icons/Github.astro";
+import Graphql from "@/icons/Graphql.astro";
+import HTML from "@/icons/Html.astro";
+import JavaScript from "@/icons/JavaScript.astro";
+import Kotlin from "@/icons/Kotlin.astro";
+import Mongo from "@/icons/Mongo.astro";
+import MySQL from "@/icons/Sql.astro";
+import Next from "@/icons/Next.astro";
+import Node from "@/icons/Node.astro";
+import React from "@/icons/React.astro";
+import Redis from "@/icons/Redis.astro";
+import Section from "../Section.astro";
+import Sql from "@/icons/Sql.astro";
+import Stripe from "@/icons/Stripe.astro";
+import Swift from "@/icons/Swift.astro";
+import SwiftUI from "@/icons/SwiftUi.astro";
+import Tailwind from "@/icons/Tailwind.astro";
+import Terraform from "@/icons/Terraform.astro";
+import TypeScript from "@/icons/Type.astro";
+
+const SKILLS_ICONS: Record<string, any> = {
+  Aws,
+  CSS,
+  Deno,
+  Docker,
+  Flutter,
+  Git,
+  GitHub,
+  Graphql,
+  HTML,
+  JavaScript,
+  Kotlin,
+  Mongo,
+  MySQL,
+  Next,
+  Node,
+  React,
+  Redis,
+  Sql,
+  Stripe,
+  Swift,
+  SwiftUI,
+  Tailwind,
+  Terraform,
+  TypeScript,
+};
+---
+
+<Section title="Habilidades">
+  <ul>
+    {
+      skills.map(({ name }) => {
+        const iconName = name === "Next.js" ? "Next" : name;
+        const Icon = SKILLS_ICONS[iconName];
+
+        return (
+          <li>
+            {Icon && <Icon />} <span>{name}</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    align-items: center;
+    background: #eee;
+    border-radius: 6px;
+    color: black;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 500;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
+  }
+</style>
