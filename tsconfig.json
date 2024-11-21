@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@cv": ["./cv.json"],
+      "@cv": ["./cv_español.json"],
       "@/*": ["src/*"]
     }
   }
