@@ -1,41 +1,36 @@
 ---
-import { basics } from "@cv";
+import LanguagePicker from "@/components/LanguagePicker.astro";
 
 interface Props {
   title: string;
+  json: {
+    image: string;
+    summary: string;
+  };
 }
+const { title, json } = Astro.props;
 
-const { title } = Astro.props;
-const { image, summary, url } = basics;
+const { image, summary } = json;
+
+const lang = Astro.request.url.includes("/es") ? "es" : "en";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
     <meta name="description" content={summary} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <link rel="preload" as="image" href={image} />
-
-    <meta property="og:url" content={url} />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={summary} />
-    <meta property="og:image" content="" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
-    <meta property="twitter:url" content={url} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={summary} />
-    <meta name="twitter:image" content="" />
   </head>
   <body>
+    <LanguagePicker lang={lang} />
     <slot />
   </body>
 </html>
+
 <style is:global>
   html {
     font-family:
@@ -66,8 +61,8 @@ const { image, summary, url } = basics;
   }
 
   *,
-  *::after,
-  *::before {
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -91,10 +86,47 @@ const { image, summary, url } = basics;
   }
 
   p {
-    color: #888;
-    font-size: 0.8rem;
+    color: #666;
+    font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;
     text-wrap: pretty;
+  }
+
+  .print {
+    display: none !important;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+
+    .print {
+      display: block !important;
+    }
+
+    astro-dev-toolbar {
+      display: none !important;
+    }
+
+    article {
+      break-inside: avoid;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #767272a6;
+    border-radius: 1rem;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #585858;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 </style>

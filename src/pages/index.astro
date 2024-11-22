@@ -1,5 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
 
 import About from "@/components/sections/About.astro";
 import Education from "@/components/sections/Education.astro";
@@ -9,18 +10,56 @@ import KeyboardManager from "@/components/KeyboardManager.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Social from "@/components/sections/Social.astro";
+
+import { cvJson } from "@/const";
+const langJson = cvJson.es;
+const { name, label } = langJson.basics;
 ---
 
-<Layout title="CV-Web Francisco José Rodríguez Martínez">
+<Layout title={`Portafolio de ${name} - ${label}`} json={langJson.basics}>
   <main>
-    <Hero />
-    <About />
-    <Experience />
-    <Education />
-    <Projects />
-    <Skills />
-    <Social />
+    <Section>
+      <Hero json={langJson.basics} />
+    </Section>
+
+    <Section title="Sobre mí">
+      <About json={langJson.basics} />
+    </Section>
+
+    <Section title="Experiencia laboral">
+      <Experience json={langJson.work} />
+    </Section>
+
+    <Section title="Educación">
+      <Education json={langJson.education} />
+    </Section>
+
+    <Section title="Proyectos">
+      <Projects json={langJson.projects} />
+    </Section>
+
+    <Section title="Habilidades">
+      <Skills json={langJson.skills} />
+    </Section>
+
+    <!-- <Section title="Social">
+      <Social json={langJson.social} />
+    </Section> -->
   </main>
 
-  <KeyboardManager />
+  <KeyboardManager json={langJson.basics} />
 </Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
+  }
+</style>
