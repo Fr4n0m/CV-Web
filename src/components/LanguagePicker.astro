@@ -6,18 +6,15 @@ const languages = ["es", "en"] as const;
 type Language = (typeof languages)[number];
 
 function updateLanguageUrl(
-  currentLang: Language, // Idioma actual.
-  targetLang: Language // Idioma al que se quiere cambiar.
+  currentLang: Language,
+  targetLang: Language
 ): string {
-  // Para español (`es`), la ruta base es `/`.
   if (currentLang === "es" && targetLang === "en") {
     return "/en";
   }
-  // Para inglés (`en`), la ruta base es `/en`.
   if (currentLang === "en" && targetLang === "es") {
     return "/";
   }
-  // Si no hay cambios (idioma actual), devolvemos la misma URL.
   return currentLang === "es" ? "/" : "/en";
 }
 ---
@@ -73,6 +70,7 @@ function updateLanguageUrl(
   li:hover {
     background: #ddd;
     border: 1px solid #ddd;
+    cursor: pointer;
   }
 
   li.active {
