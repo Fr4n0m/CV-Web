@@ -1,6 +1,4 @@
 ---
-import { skills } from "@cv";
-
 import Aws from "@/icons/Aws.astro";
 import CSS from "@/icons/Css.astro";
 import Deno from "@/icons/Deno.astro";
@@ -18,7 +16,6 @@ import Next from "@/icons/Next.astro";
 import Node from "@/icons/Node.astro";
 import React from "@/icons/React.astro";
 import Redis from "@/icons/Redis.astro";
-import Section from "../Section.astro";
 import Sql from "@/icons/Sql.astro";
 import Stripe from "@/icons/Stripe.astro";
 import Swift from "@/icons/Swift.astro";
@@ -26,6 +23,12 @@ import SwiftUI from "@/icons/SwiftUi.astro";
 import Tailwind from "@/icons/Tailwind.astro";
 import Terraform from "@/icons/Terraform.astro";
 import TypeScript from "@/icons/Type.astro";
+
+interface Props {
+  json: { name: string }[];
+}
+
+const { json } = Astro.props;
 
 const SKILLS_ICONS: Record<string, any> = {
   Aws,
@@ -55,22 +58,15 @@ const SKILLS_ICONS: Record<string, any> = {
 };
 ---
 
-<Section title="Habilidades">
-  <ul>
-    {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name;
-        const Icon = SKILLS_ICONS[iconName];
-
-        return (
-          <li>
-            {Icon && <Icon />} <span>{name}</span>
-          </li>
-        );
-      })
-    }
-  </ul>
-</Section>
+<ul>
+  {
+    json.map(({ name }) => (
+      <li>
+        <span>{name}</span>
+      </li>
+    ))
+  }
+</ul>
 
 <style>
   ul {
