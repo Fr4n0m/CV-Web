@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Francisco José Rodríguez Martínez",
-    "label": "Full Stack Developer con más de 15 años de experiencia & Creador de Contenido de Programación",
+    "label": "Desarrollador Full Stack Web & Desarrollador de Software",
     "image": "/logo.png",
     "email": "fran11799@outlook.com",
     "phone": "+34 661808963",
     "url": "https://professional-portfolio-nine.vercel.app/",
-    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollo de start-ups hasta liderando equipos de empresas multinacionales.",
+    "summary": "Busco oportunidades para crecer profesionalmente y contribuir de manera significativa a proyectos innovadores. Vivo en Málaga, España.",
     "location": {
       "address": "",
       "postalCode": "29010",
@@ -23,7 +23,7 @@
       {
         "network": "InfoJobs",
         "username": "Francisco Rodríguez",
-        "url": "https://infojobs.com/midudev"
+        "url": "https://infojobs.com/"
       },
       {
         "network": "GitHub",
@@ -39,29 +39,30 @@
   },
   "work": [
     {
-      "name": "midudev",
-      "position": "Divulgador sobre Programación Web",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2021-01-01",
+      "name": "Dimap",
+      "position": "Desarrollador Front-End",
+      "url": "",
+      "startDate": "2024-09-01",
       "endDate": null,
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
+      "summary": "Desarrollador Front-End en Dimap.",
       "highlights": ["Started the company"]
     },
     {
-      "name": "Adevinta",
-      "position": "Lead Frontend Architect",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
+      "name": "Gubb Marketing",
+      "position": "Desarrollador de Software",
+      "url": "",
+      "startDate": "2024-04-01",
+      "endDate": "2024-08-01",
+      "summary": "Desarrollador de Software Jr. en Gubb Marketing.",
       "highlights": ["Started the company"]
     },
     {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
+      "name": "Agrooe",
+      "position": "Desarrollador de Software",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7186307687771500544/",
+      "startDate": "2024-03-01",
+      "endDate": "2024-06-01",
+      "summary": "Creamos desde cero una aplicación llamada Agrooe Cashback, centrada en fomentar la venta local de productos ecológicos y recompensar a los usuarios por sus elecciones sostenibles. Como parte integral del equipo, colaboré estrechamente con un equipo profesional para sacar un MVP de la web.",
       "highlights": ["Started the company"]
     }
   ],
@@ -78,12 +79,12 @@
   ],
   "education": [
     {
-      "institution": "Universitat Oberta de Catalunya",
-      "url": "https://www.uoc.edu/portal/es/index.html",
-      "area": "Ingeniero de Software",
-      "studyType": "Bachelor",
-      "startDate": "2003-01-01",
-      "endDate": "2009-01-01",
+      "institution": "CodeSpace Academy",
+      "url": "https://codespaceacademy.com/",
+      "area": "Desarrollador Full Stack Web",
+      "studyType": "",
+      "startDate": "2023-09-01",
+      "endDate": "2024-06-01",
       "score": "4.0",
       "courses": ["DB1101 - Basic SQL"]
     }
