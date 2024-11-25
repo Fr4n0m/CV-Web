@@ -8,16 +8,15 @@ interface Props {
   }[];
 }
 
+import { formatDateRange } from "@/utils";
+
 const { json } = Astro.props;
 ---
 
 <ul>
   {
     json.map(({ institution, startDate, endDate, area }) => {
-      const startYear = new Date(startDate).getFullYear();
-      const endYear =
-        endDate != null ? new Date(endDate).getFullYear() : "Actual";
-      const years = `${startYear} - ${endYear}`;
+      const years = formatDateRange(startDate, endDate);
 
       return (
         <li>

@@ -11,6 +11,7 @@ import KeyboardManager from "@/components/KeyboardManager.astro";
 import Social from "@/components/sections/Social.astro";
 
 import { cvJson } from "@/const";
+import EnglishKeyboardManager from "@/components/EnglishKeyboardManager.astro";
 const langJson = cvJson.en;
 const { name, label } = cvJson.en.basics;
 ---
@@ -46,7 +47,7 @@ const { name, label } = cvJson.en.basics;
     </Section> -->
   </main>
 
-  <KeyboardManager json={langJson.basics} />
+  <EnglishKeyboardManager json={langJson.basics} />
 </Layout>
 
 <style>

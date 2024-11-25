@@ -1,5 +1,7 @@
 ---
 const { json } = Astro.props;
+
+import { formatDateRange } from "@/utils";
 ---
 
 <ul>
@@ -22,10 +24,7 @@ const { json } = Astro.props;
         highlights: string[];
         url: string;
       }) => {
-        const startYear = new Date(startDate).getFullYear();
-        const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : "Actual";
-        const years = `${startYear} - ${endYear}`;
+        const years = formatDateRange(startDate, endDate);
 
         return (
           <li>
@@ -64,6 +63,7 @@ const { json } = Astro.props;
   article h3 {
     font-weight: 500;
     color: #111;
+    margin-bottom: 3px;
   }
 
   article a {
@@ -83,7 +83,7 @@ const { json } = Astro.props;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
   }
 
   time {

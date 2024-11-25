@@ -60,11 +60,16 @@ const SKILLS_ICONS: Record<string, any> = {
 
 <ul>
   {
-    json.map(({ name }) => (
-      <li>
-        <span>{name}</span>
-      </li>
-    ))
+    json.map(({ name }) => {
+      const iconName = name === "Next.js" ? "Next" : name;
+      const Icon = SKILLS_ICONS[iconName];
+
+      return (
+        <li>
+          {Icon && <Icon />} <span>{name}</span>
+        </li>
+      );
+    })
   }
 </ul>
 
