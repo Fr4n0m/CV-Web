@@ -26,7 +26,9 @@ const lang = Astro.request.url.includes("/es") ? "es" : "en";
     <link rel="preload" as="image" href={image} />
   </head>
   <body>
-    <LanguagePicker lang={lang} />
+    <div class="no-print">
+      <LanguagePicker lang={lang} />
+    </div>
     <slot />
   </body>
 </html>
