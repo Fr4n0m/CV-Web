@@ -166,6 +166,11 @@
       "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
     },
     {
+      "name": "Express",
+      "level": "",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
       "name": "MySQL",
       "level": "",
       "keywords": [
@@ -182,6 +187,16 @@
     },
     {
       "name": "Stripe",
+      "level": "",
+      "keywords": ["Desarrollo Web", "Backend", "Servidor"]
+    },
+    {
+      "name": "Mongo",
+      "level": "",
+      "keywords": ["Desarrollo Web", "Backend", "Servidor"]
+    },
+    {
+      "name": "Supabase",
       "level": "",
       "keywords": ["Desarrollo Web", "Backend", "Servidor"]
     },
@@ -222,11 +237,6 @@
       "keywords": ["Desarrollo Web", "Backend", "Servidor"]
     },
     {
-      "name": "Mongo",
-      "level": "",
-      "keywords": ["Desarrollo Web", "Backend", "Servidor"]
-    },
-    {
       "name": "Astro",
       "level": "",
       "keywords": ["Desarrollo Web", "Frontend"]
@@ -250,6 +260,31 @@
       "name": "Bun",
       "level": "",
       "keywords": ["Desarrollo Web"]
+    },
+    {
+      "name": "Vercel",
+      "level": "",
+      "keywords": ["Desarrollo Web"]
+    },
+    {
+      "name": "MacOS",
+      "level": "",
+      "keywords": ["Seguridad", "OS"]
+    },
+    {
+      "name": "Windows",
+      "level": "",
+      "keywords": ["Seguridad", "OS"]
+    },
+    {
+      "name": "Debian",
+      "level": "",
+      "keywords": ["Seguridad", "OS"]
+    },
+    {
+      "name": "Kali",
+      "level": "",
+      "keywords": ["Seguridad", "OS"]
     }
   ],
   "languages": [
