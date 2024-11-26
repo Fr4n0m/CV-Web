@@ -23,6 +23,12 @@ import SwiftUI from "@/icons/SwiftUi.astro";
 import Tailwind from "@/icons/Tailwind.astro";
 import Terraform from "@/icons/Terraform.astro";
 import TypeScript from "@/icons/Type.astro";
+import AstroIcon from "@/icons/AstroIcon.astro";
+import Vite from "@/icons/Vite.astro";
+import Cplusplus from "@/icons/C++.astro";
+import Npm from "@/icons/Npm.astro";
+import Pnpm from "@/icons/Pnpm.astro";
+import Bun from "@/icons/Bun.astro";
 
 interface Props {
   json: { name: string }[];
@@ -55,13 +61,27 @@ const SKILLS_ICONS: Record<string, any> = {
   Tailwind,
   Terraform,
   TypeScript,
+  AstroIcon,
+  Vite,
+  Cplusplus,
+  Npm,
+  Pnpm,
+  Bun,
 };
 ---
 
 <ul>
   {
     json.map(({ name }) => {
-      const iconName = name === "Next.js" ? "Next" : name;
+      const iconName =
+        name === "Next.js"
+          ? "Next"
+          : name === "Astro"
+            ? "AstroIcon"
+            : name === "C++"
+              ? "Cplusplus"
+              : name;
+
       const Icon = SKILLS_ICONS[iconName];
 
       return (

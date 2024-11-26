@@ -117,22 +117,27 @@
   "skills": [
     {
       "name": "HTML",
-      "level": "Master",
+      "level": "",
       "keywords": ["Desarrollo Web", "Frontend"]
     },
     {
       "name": "CSS",
-      "level": "Master",
+      "level": "",
       "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
     },
     {
       "name": "JavaScript",
-      "level": "Master",
+      "level": "",
       "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
     },
     {
+      "name": "C++",
+      "level": "",
+      "keywords": []
+    },
+    {
       "name": "Tailwind",
-      "level": "Avanzado",
+      "level": "",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -142,7 +147,7 @@
     },
     {
       "name": "TypeScript",
-      "level": "Avanzado",
+      "level": "",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -152,12 +157,17 @@
     },
     {
       "name": "Node",
-      "level": "Avanzado",
+      "level": "",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "Deno",
+      "level": "",
       "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
     },
     {
       "name": "MySQL",
-      "level": "Avanzado",
+      "level": "",
       "keywords": [
         "Bases de Datos",
         "SQL",
@@ -166,13 +176,23 @@
       ]
     },
     {
+      "name": "Graphql",
+      "level": "",
+      "keywords": ["Desarrollo Web", "Backend", "Servidor"]
+    },
+    {
+      "name": "Stripe",
+      "level": "",
+      "keywords": ["Desarrollo Web", "Backend", "Servidor"]
+    },
+    {
       "name": "Git",
       "level": "Avanzado",
       "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
     },
     {
       "name": "GitHub",
-      "level": "Avanzado",
+      "level": "",
       "keywords": [
         "Control de Versiones",
         "Colaboración",
@@ -182,7 +202,7 @@
     },
     {
       "name": "Next.js",
-      "level": "Avanzado",
+      "level": "",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -193,8 +213,43 @@
     },
     {
       "name": "React",
-      "level": "Avanzado",
+      "level": "",
       "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Docker",
+      "level": "",
+      "keywords": ["Desarrollo Web", "Backend", "Servidor"]
+    },
+    {
+      "name": "Mongo",
+      "level": "",
+      "keywords": ["Desarrollo Web", "Backend", "Servidor"]
+    },
+    {
+      "name": "Astro",
+      "level": "",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "Vite",
+      "level": "",
+      "keywords": ["Desarrollo Web"]
+    },
+    {
+      "name": "Npm",
+      "level": "",
+      "keywords": ["Desarrollo Web"]
+    },
+    {
+      "name": "Pnpm",
+      "level": "",
+      "keywords": ["Desarrollo Web"]
+    },
+    {
+      "name": "Bun",
+      "level": "",
+      "keywords": ["Desarrollo Web"]
     }
   ],
   "languages": [
