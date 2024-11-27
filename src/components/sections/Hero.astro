@@ -7,6 +7,9 @@ import WorldMap from "@/icons/WorldMap.astro";
 import Portfolio from "@/icons/Portfolio.astro";
 import type { SocialIcon } from "@/types";
 
+import QRCode from "qrcode";
+import InfoJobs from "@/icons/InfoJobs.astro";
+
 interface Props {
   json: {
     name: string;
@@ -30,10 +33,31 @@ const { json } = Astro.props;
 const { name, label, image, location, profiles, phone, email } = json;
 const { city, region } = location;
 
+async function generateQRCode(url: string) {
+  try {
+    return await QRCode.toDataURL(url);
+  } catch (err) {
+    console.error("Error generating QR code:", err);
+    return null;
+  }
+}
+
+const linksWithQR = await Promise.all(
+  [
+    { title: "Email", url: `mailto:${email}` },
+    { title: "Phone", url: `tel:${phone}` },
+    ...profiles.map(({ network, url }) => ({ title: network, url })),
+  ].map(async (item) => ({
+    ...item,
+    qrCode: await generateQRCode(item.url),
+  }))
+);
+
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
   LinkedIn,
   Portfolio,
+  InfoJobs,
 };
 
 const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
@@ -58,9 +82,7 @@ const printInfo = [email, phone, linkedUrl, githubUrl, portfolioUrl]
       <WorldMap />
       {city}, {region}
     </span>
-    <footer class="print">
-      {printInfo}
-    </footer>
+
     <footer class="no-print">
       {
         email && (
@@ -101,6 +123,19 @@ const printInfo = [email, phone, linkedUrl, githubUrl, portfolioUrl]
             </a>
           ) : null;
         })
+      }
+    </footer>
+
+    <footer class="print">
+      {
+        linksWithQR.map(({ title, qrCode }) =>
+          qrCode ? (
+            <div class="qr-item" title={`QR Code for ${title}`}>
+              <img src={qrCode} alt={`QR code for ${title}`} />
+              <span>{title}</span>
+            </div>
+          ) : null
+        )
       }
     </footer>
   </div>
@@ -176,6 +211,41 @@ const printInfo = [email, phone, linkedUrl, githubUrl, portfolioUrl]
   footer a:hover {
     background: #eee;
     border: 1px solid #ddd;
+  }
+
+  .qr-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .qr-item img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 4px;
+  }
+
+  .qr-item span {
+    font-size: 0.75rem;
+    color: #555;
+    text-align: center;
+  }
+
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+
+    .print {
+      display: flex !important;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
   }
 
   @media (width <= 700px) {
