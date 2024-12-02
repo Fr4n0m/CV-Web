@@ -85,7 +85,6 @@
       "studyType": "",
       "startDate": "2023-09-01",
       "endDate": "2024-06-01",
-      "score": "",
       "courses": ["DB1101 - Basic SQL"]
     },
     {
@@ -115,7 +114,6 @@
       "studyType": "",
       "startDate": "2015-09-01",
       "endDate": "2017-06-01",
-      "score": "",
       "courses": [""]
     }
   ],

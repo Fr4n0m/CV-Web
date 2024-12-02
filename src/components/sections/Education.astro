@@ -5,6 +5,7 @@ interface Props {
     startDate: string;
     endDate: string;
     area: string;
+    score?: string;
   }[];
 }
 
@@ -15,7 +16,7 @@ const { json } = Astro.props;
 
 <ul>
   {
-    json.map(({ institution, startDate, endDate, area }) => {
+    json.map(({ institution, startDate, endDate, area, score }) => {
       const years = formatDateRange(startDate, endDate);
 
       return (
@@ -31,6 +32,7 @@ const { json } = Astro.props;
 
             <footer>
               <p>{area}</p>
+              {score && <span>{score}</span>}
             </footer>
           </article>
         </li>
@@ -62,6 +64,15 @@ const { json } = Astro.props;
     color: #555;
     font-size: 0.85rem;
     min-width: 102px;
+  }
+
+  span {
+    border-radius: 6px;
+    background: #eee;
+    color: #444;
+    font-size: 0.6rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
   }
 
   @media (width <= 700px) {
