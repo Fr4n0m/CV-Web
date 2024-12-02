@@ -32,9 +32,18 @@ import { formatDateRange } from "@/utils";
               <header>
                 <div>
                   <h3>
-                    <a href={url} title={`Ver ${name}`} target="_blank">
-                      {name}
-                    </a>
+                    {url ? (
+                      <a
+                        href={url}
+                        title={`Ver ${name}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {name}
+                      </a>
+                    ) : (
+                      name
+                    )}
                   </h3>
                   <h4>{position}</h4>
                 </div>
