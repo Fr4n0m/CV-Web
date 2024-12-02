@@ -1,0 +1,35 @@
+---
+interface Language {
+  language: string;
+  fluency: string;
+}
+
+const { json } = Astro.props;
+
+const languages: Language[] = json || [];
+---
+
+{
+  languages.length > 0 ? (
+    <ul>
+      {languages.map(({ language, fluency }: Language) => (
+        <li>
+          <h2>{language}</h2>
+          <p>{fluency}</p>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p>No se han especificado idiomas.</p>
+  )
+}
+
+<style>
+  li {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+  }
+</style>

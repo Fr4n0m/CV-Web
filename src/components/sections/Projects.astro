@@ -27,7 +27,12 @@ const { json } = Astro.props;
             <article>
               <header>
                 <h3>
-                  <a href={url} title={`Ver el proyecto ${name}`}>
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={`Ver los proyectos en ${name}`}
+                  >
                     {name}
                   </a>
                   {isActive && <span>•</span>}
@@ -36,6 +41,7 @@ const { json } = Astro.props;
                       class="github-code-link"
                       href={github}
                       target="_blank"
+                      rel="noopener noreferrer"
                       title={`Ver código fuente del proyecto ${name}`}
                     >
                       <GitHub />
@@ -62,7 +68,6 @@ const { json } = Astro.props;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
-    margin-inline: -16px;
   }
 
   article {

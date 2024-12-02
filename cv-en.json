@@ -2,7 +2,7 @@
   "basics": {
     "name": "Francisco José Rodríguez Martínez",
     "label": "Full Stack Web Developer & Software Developer",
-    "image": "/logo.png",
+    "image": "/foto-carnet.webp",
     "email": "fran11799@outlook.com",
     "phone": "+34 661808963",
     "url": "https://professional-portfolio-nine.vercel.app/",
@@ -10,9 +10,9 @@
     "location": {
       "address": "",
       "postalCode": "29010",
-      "city": "Málaga",
+      "city": "Malaga",
       "countryCode": "ES",
-      "region": "España"
+      "region": "Spain"
     },
     "profiles": [
       {
@@ -23,7 +23,7 @@
       {
         "network": "InfoJobs",
         "username": "Francisco Rodríguez",
-        "url": "https://infojobs.com/"
+        "url": ""
       },
       {
         "network": "GitHub",
@@ -85,6 +85,36 @@
       "studyType": "",
       "startDate": "2023-09-01",
       "endDate": "2024-06-01",
+      "score": "",
+      "courses": ["DB1101 - Basic SQL"]
+    },
+    {
+      "institution": "University of Malaga",
+      "url": "",
+      "area": "Computer Engineering",
+      "studyType": "",
+      "startDate": "2018-09-01",
+      "endDate": "2022-06-01",
+      "score": "Not completed due to personal projects.",
+      "courses": [""]
+    },
+    {
+      "institution": "University of Malaga",
+      "url": "",
+      "area": "Electronic Systems Engineering",
+      "studyType": "",
+      "startDate": "2017-09-01",
+      "endDate": "2018-06-01",
+      "score": "Not completed due to personal projects.",
+      "courses": [""]
+    },
+    {
+      "institution": "IES Puerta de Arenas",
+      "url": "",
+      "area": "Technological High School",
+      "studyType": "",
+      "startDate": "2015-09-01",
+      "endDate": "2017-06-01",
       "score": "",
       "courses": [""]
     }
@@ -294,7 +324,7 @@
     },
     {
       "language": "English",
-      "fluency": "Advanced"
+      "fluency": "Without official qualifications. Intermediate level."
     }
   ],
   "interests": [
@@ -311,51 +341,18 @@
   ],
   "projects": [
     {
-      "name": "mars.codes",
+      "name": "GitHub",
       "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
-      "highlights": ["Elige tu propia aventura", "En desarrollo"],
-      "url": "https://mars.codes"
+      "description": "Take a look at my projects on Github.",
+      "highlights": ["Projects in Github", "Continued development"],
+      "url": "https://github.com/Fr4n0m?tab=repositories"
     },
     {
-      "name": "AdventJS",
+      "name": "Portfolio",
       "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
-      "highlights": [
-        "+1 millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
-      ],
-      "url": "https://adventjs.dev"
-    },
-    {
-      "name": "Codember",
-      "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
-      "highlights": ["+2000 usuarios activos", "Retos para cualquier lenguaje"],
-      "url": "https://codember.dev"
-    },
-    {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": ["100k visitas al mes", "Desarrollado por la comunidad"],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
-    },
-    {
-      "name": "Pruebas Técnicas",
-      "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
-      "highlights": ["100% gratuito", "+500 soluciones de la comunidad"],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
-    },
-    {
-      "name": "miduConf",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": ["+15k tickets repartidos", "+50k espectadores en directo"],
-      "url": "https://miduconf.com"
+      "description": "Take a look at my projects in my personal portfolio.",
+      "highlights": ["Projects in Portfolio", "Continued development"],
+      "url": "https://professional-portfolio-nine.vercel.app/projects"
     }
   ],
   "social": []

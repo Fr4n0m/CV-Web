@@ -10,6 +10,7 @@ import KeyboardManager from "@/components/KeyboardManager.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Social from "@/components/sections/Social.astro";
+import Languages from "@/components/sections/Languages.astro";
 
 import { cvJson } from "@/const";
 const langJson = cvJson.es;
@@ -34,9 +35,13 @@ const { name, label } = langJson.basics;
       <Education json={langJson.education} />
     </Section>
 
-    <!-- <Section title="Proyectos">
+    <Section title="Idiomas">
+      <Languages json={langJson.languages} />
+    </Section>
+
+    <Section title="Proyectos">
       <Projects json={langJson.projects} />
-    </Section> -->
+    </Section>
 
     <Section title="Habilidades">
       <Skills json={langJson.skills} />
