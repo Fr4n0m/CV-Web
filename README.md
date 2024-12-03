@@ -1,6 +1,6 @@
-# ![553shots_so](https://github.com/user-attachments/assets/7c7597a3-2fff-43fe-ae90-f5e25b9562db)
+![553shots_so](https://github.com/user-attachments/assets/7c7597a3-2fff-43fe-ae90-f5e25b9562db)
 
-CV Web
+# CV Web
 
 Este es un sitio web personal de portafolio construido con [Astro](https://astro.build/). Muestra mis habilidades, experiencia, educación, proyectos y más.
 
